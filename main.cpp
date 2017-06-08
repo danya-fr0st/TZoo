@@ -28,7 +28,7 @@ int main()
     TAnimal * Hippo = new THippopotamus("Jo", 14);
     if(!OneZoo.AddNewAnimal(&Hippo))
         delete Hippo;
-    TAnimal * Lion = new TLeo("Simba", 10);
+    TAnimal * Lion = TZoo::create("Leo");//new TLeo("Simba", 10);
     if(!OneZoo.AddNewAnimal(&Lion))
         delete Lion;
     TAnimal * Elep = new TElephas("Yoyo", 77);

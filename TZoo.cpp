@@ -13,6 +13,20 @@ TZoo::~TZoo() {
     }
     delete[] Animals;
 }
+// фабрика
+TAnimal* TZoo::create(std::string name){
+        if (name == "Giraffa") return new TGiraffa("Gugi", 21);
+        else
+            if (name == "Elephas") return new TElephas("Lilli", 19);
+                else
+                    if (name == "Leo") return new TLeo("Leo", 6);
+                    else
+                        if (name == "Tigris") return new TTigris("Arr", 19);
+                        else
+                            if (name == "Hippopotamus") return new THippopotamus("Hippo", 15);
+                            else
+                                if (name == "Loxodonta") return new TLoxodonta("Donna", 24);
+}
 
 void TZoo::Work() {
     std::cout << ZooName << std::endl;

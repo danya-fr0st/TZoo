@@ -33,6 +33,8 @@ public:
 
     ~TZoo();
 
+    static TAnimal* create(std::string name);
+
     bool AddNewAnimal(TAnimal **newAnimal);
 
     void New(size_t i);
